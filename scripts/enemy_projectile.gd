@@ -1,5 +1,5 @@
 extends Area2D
-var speed = 400
+var speed = 400.5
 var direction = 0
 
 
