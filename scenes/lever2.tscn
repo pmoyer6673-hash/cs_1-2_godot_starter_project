@@ -1,17 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://bqwd7uptu4bbq"]
+[gd_scene load_steps=7 format=3 uid="uid://gbh3hrtw4tb1"]
 
-[ext_resource type="Texture2D" uid="uid://bl5vm2j0n6sxa" path="res://sprites/items/ALever.png" id="1_iorl1"]
-[ext_resource type="Script" uid="uid://dbwgynl4w3noc" path="res://scenes/lever.gd" id="1_ncfea"]
+[ext_resource type="Script" uid="uid://dy1jj5xjhhnct" path="res://scenes/lever_2.gd" id="1_amh34"]
+[ext_resource type="Texture2D" uid="uid://bl5vm2j0n6sxa" path="res://sprites/items/ALever.png" id="2_bqhie"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1kcve"]
 size = Vector2(58, 27)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_flenb"]
-atlas = ExtResource("1_iorl1")
+atlas = ExtResource("2_bqhie")
 region = Rect2(81, 0, 81, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3341j"]
-atlas = ExtResource("1_iorl1")
+atlas = ExtResource("2_bqhie")
 region = Rect2(0, 0, 81, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3d23c"]
@@ -33,9 +33,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Lever" type="Area2D" groups=["Lever"]]
+[node name="Lever" type="Area2D"]
 scale = Vector2(0.5, 0.5)
-script = ExtResource("1_ncfea")
+script = ExtResource("1_amh34")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -15)
