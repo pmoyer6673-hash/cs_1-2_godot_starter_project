@@ -33,7 +33,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Lever" type="Area2D"]
+[node name="Lever" type="Area2D" groups=["LEVERE"]]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_amh34")
 

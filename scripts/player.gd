@@ -18,6 +18,7 @@ var Is_attacking = false
 var attack_Timer = 0.6
 var current_Enemy
 var playerInRange = false
+var current_Lever
 
 func _ready() -> void:
 	pass
@@ -118,7 +119,11 @@ func shoot():
 func _process(delta: float):
 	if Is_attacking and current_Enemy != null:
 		current_Enemy.queue_free()
+	if Is_attacking and current_Lever != null:
+		current_Lever.queue_free()
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("enemy"):
 		current_Enemy = body
+	if body.is_in_group("LEVERE"):
+		current_Lever = body

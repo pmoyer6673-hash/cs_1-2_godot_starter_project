@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bl5vm2j0n6sxa" path="res://sprites/items/ALever.png" id="2_fs5fx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1kcve"]
-size = Vector2(58, 27)
+size = Vector2(58, 62.5)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_flenb"]
 atlas = ExtResource("2_fs5fx")
@@ -33,17 +33,17 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Lever" type="Area2D"]
+[node name="Lever" type="Area2D" groups=["LEVERE"]]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_8n26l")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -15)
+position = Vector2(0, -32.75)
 shape = SubResource("RectangleShape2D_1kcve")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-42, -66)
 sprite_frames = SubResource("SpriteFrames_3d23c")
-animation = &"off"
+animation = &"on"
 centered = false
 offset = Vector2(12, 0)
