@@ -6,19 +6,19 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1kcve"]
 size = Vector2(58, 62.5)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_flenb"]
-atlas = ExtResource("2_fs5fx")
-region = Rect2(81, 0, 81, 64)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_3341j"]
 atlas = ExtResource("2_fs5fx")
 region = Rect2(0, 0, 81, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_flenb"]
+atlas = ExtResource("2_fs5fx")
+region = Rect2(81, 0, 81, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3d23c"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_flenb")
+"texture": SubResource("AtlasTexture_3341j")
 }],
 "loop": true,
 "name": &"off",
@@ -26,7 +26,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3341j")
+"texture": SubResource("AtlasTexture_flenb")
 }],
 "loop": true,
 "name": &"on",
@@ -44,6 +44,8 @@ shape = SubResource("RectangleShape2D_1kcve")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-42, -66)
 sprite_frames = SubResource("SpriteFrames_3d23c")
-animation = &"on"
+animation = &"off"
 centered = false
 offset = Vector2(12, 0)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

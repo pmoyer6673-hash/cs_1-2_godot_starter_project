@@ -127,3 +127,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		current_Enemy = body
 	if body.is_in_group("LEVERE"):
 		current_Lever = body
+
+
+func _on_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
