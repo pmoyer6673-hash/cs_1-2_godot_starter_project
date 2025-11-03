@@ -10,19 +10,26 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_mlelee_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
+	if body.name == "Player":
+		whack = true
 
 func _on_mlelee_body_exited(body: Node2D) -> void:
-	pass # Replace with function body.
+	if body.name == "Player":
+		whack = false
 
 func _on_doors_seek_theme_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
+	if body.name == "Player":
+		in_range = false
+		asgoring = true
 
 func _on_doors_seek_theme_body_exited(body: Node2D) -> void:
-	pass # Replace with function body.
-
+	if body.name == "Player":
+		asgoring = false
+		
 func _on_nd_amendment_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
+	if body.name == "Player":
+		in_range = true
 
 func _on_nd_amendment_body_exited(body: Node2D) -> void:
-	pass # Replace with function body.
+	if body.name == "Player":
+		in_range = false
