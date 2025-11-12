@@ -16,8 +16,13 @@ func _process(delta: float) -> void:
 			shoot()
 			timer = startTime
 		timer -= delta
+	elif asgoring:
+		position += position.direction_to(player.position) *speed*delta
+	if whack:
+			
+			pass
 
-	pass
+
 
 func _on_mlelee_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
@@ -39,6 +44,7 @@ func _on_doors_seek_theme_body_exited(body: Node2D) -> void:
 	if body.name == "Player":
 		player = body
 		asgoring = false
+		in_range = true
 		
 func _on_nd_amendment_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
